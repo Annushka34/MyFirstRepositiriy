@@ -13,5 +13,10 @@ namespace DIContainerDLL
             RegisterTypes = new Dictionary<Type, Type>();
         }
         public IDictionary<Type, Type> RegisterTypes { get; private set; }
+
+        public void Register<T1, T2>()
+        {
+            RegisterTypes.Add(typeof(T1),typeof(T2));
+        }
     }
 }
